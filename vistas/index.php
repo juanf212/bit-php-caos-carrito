@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- 1. nav bar -->
-      <?=require('navegacion.php');?>
+      <?php require('navegacion.php');?>
     <!-- 2. categorias productos -->
     <div class="container">
     <div class="row">
