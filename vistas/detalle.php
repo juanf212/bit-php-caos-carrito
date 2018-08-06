@@ -25,21 +25,21 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="card mt-4">
-            <img src="<?= $productos[$_GET['id']-1]['imagen'] ?>" class="rounded float-left" alt="Responsive image">
+            <img src="<?= $producto['imagen'] ?>" class="rounded float-left" alt="Responsive image">
             </div>
         </div>
         <div class="col">
             <div class="card mt-4" style="width: 25rem;display:inline-block;">
             <div class="card-body">
-                <h5 class="card-title"><?= $productos[$_GET['id']-1]['nombre'] ?></h5>
+                <h5 class="card-title"><?= $producto['nombre'] ?></h5>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">Tamaños</label>
                     </div>
                     <select class="custom-select" id="inputGroupSelect01">
                         <option selected>Elige...</option>
-                        <?php foreach($productosSeleccionados[$_GET['id']] as $productoSeleccionado) :?>
-                        <option value="1"><?= $productoSeleccionado['c.nombre']?></option>
+                        <?php foreach($medidas as $medida) :?>
+                        <option value="<?= $medida['id']?>"><?= $medida['nombre']?></option>
                         <?php endforeach ?>
                     </select>
                 </div>

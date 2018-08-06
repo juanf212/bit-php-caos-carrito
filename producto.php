@@ -2,8 +2,8 @@
 
     require('conexion.php');
 
-    $productos = consulta("SELECT * FROM producto");
+    $productos = consulta("SELECT * FROM productos");
 
-    $categorias = consulta("SELECT * FROM categoria");
+    $categorias = consulta("SELECT * FROM categorias");
 
     
