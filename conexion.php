@@ -6,7 +6,7 @@
             'localhost',
             'root',
             '',
-            'caos_bd'
+            'caos_hd'
         );
         
         $ResultadoDeLaConsulta = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
