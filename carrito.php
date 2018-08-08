@@ -6,7 +6,7 @@
     ["nombre" => "Falda", "id" => 3],
   ); */
 
-  require('producto.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-    <?php require('navegacion.php'); ?>
+    <?php require('vistas/navegacion.php'); ?>
 
     <div class="container">
         <!-- fila principal -->
