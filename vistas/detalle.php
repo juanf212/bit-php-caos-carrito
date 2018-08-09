@@ -44,6 +44,7 @@
                     </select>
                 </div>
                 <p class="card-text text-secondary">Precio: </p>
+                <a href="carrito.php?id=<?= $medida['id'] ?> " class="btn btn-primary">Agregar al carrito</a>
             </div>
             </div>
         </div>
