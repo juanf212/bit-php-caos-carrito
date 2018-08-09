@@ -32,19 +32,24 @@
             <div class="card mt-4" style="width: 25rem;display:inline-block;">
             <div class="card-body">
                 <h5 class="card-title"><?= $producto['nombre'] ?></h5>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Tamaños</label>
+                <form action="agregar-al-carrito.php">
+                    <input type="hidden" name="producto" value="<?= $producto['id']  ?>">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Tamaños</label>
+                        </div>
+                        
+                        <select name="medida" class="custom-select" id="inputGroupSelect01">
+                            <option selected>Elige...</option>
+                            <?php foreach($medidas as $medida) :?>
+                            <option value="<?= $medida['id']?>"><?= $medida['nombre']?></option>
+                            <?php endforeach ?>
+                        </select>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Elige...</option>
-                        <?php foreach($medidas as $medida) :?>
-                        <option value="<?= $medida['id']?>"><?= $medida['nombre']?></option>
-                        <?php endforeach ?>
-                    </select>
-                </div>
-                <p class="card-text text-secondary">Precio: </p>
-                <a href="carrito.php?id=<?= $medida['id'] ?> " class="btn btn-primary">Agregar al carrito</a>
+                    <p class="card-text text-secondary">Precio: </p>
+                    <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+                </form>
+                
             </div>
             </div>
         </div>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-    <?php require('vistas/navegacion.php'); ?>
+    <?php require('navegacion.php'); ?>
 
     <div class="container">
         <!-- fila principal -->
@@ -19,30 +18,26 @@
                 <!-- fila # articulos -->
                 <div class="row">
                     <h2 class="mr-md-3 mt-3">TU CARRITO</h4>
-                    <h4 class="mt-3"> <?= count($productos); ?> articulos</h4>
+                    <h4 class="mt-3"> <?= count($productosCarrito); ?> articulos</h4>
                 </div>
                 <!-- fila cards articulos -->
 
-                <?php foreach($productos as $producto) :?>
+                <?php foreach($productosCarrito as $producto) :?>
                     <div class="row">
                         <div class="col">
                             <div class="card mt-4" style="width: 25rem;display:inline-block;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <img class="card-img-top" src="Imagenes/<?= $producto['imagen']?>" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $producto['nombre']?></h5>
+                                    <h5 class="card-title"><?= $producto['nombre_producto']?></h5>
                                     <!-- <p class="card-text text-secondary">Tamaño</p> -->
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">Tamaños</label>
+                                            <label class="input-group-text" for="inputGroupSelect01">Tamaño</label>
+                                            <span class="form-control"><?= $producto['nombre_precio']?></span>
                                         </div>
-                                        <select class="custom-select" id="inputGroupSelect01">
-                                            <option selected>Elige...</option>
-                                            <?php foreach($categorias as $categoria) :?>
-                                            <option value="1"><?= $categoria['nombre']?></option>
-                                            <?php endforeach ?>
-                                        </select>
+                                        
                                     </div>
-                                    <p class="card-text text-secondary">Precio: </p>
+                                    <p class="card-text text-secondary">Precio: $<?= number_format($producto['precio']) ?></p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +57,7 @@
                                 <div class="card-body">
                                     <a href="#" class="btn btn-primary">Continuar</a>
                                     <h5 class="card-title mt-4">Resumen del pedido</h5>
-                                    <p class="card-text text-secondary"><?= count($productos);?> productos </p>
+                                    <p class="card-text text-secondary"><?= count($productosCarrito);?> productos </p>
                                     <p class="card-text text-secondary">Subtotal productos</p>
                                     <p class="card-text text-secondary">Gastos de evío</p>
                                     <h5 class="card-title">Total: </h5>

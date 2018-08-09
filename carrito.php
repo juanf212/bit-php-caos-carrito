@@ -1,7 +1,8 @@
 <?php 
     require('conexion.php');
-    $id = $_GET['id'];
-    $productoSeleccionado = consulta(" SELECT * FROM productos WHERE id='$id' ");
-    $productoSeleccionado = $productoSeleccionado[0];
+
+    $productosCarrito = consulta("SELECT *, productos.nombre as nombre_producto, precios.nombre as nombre_precio FROM carrito
+    JOIN productos ON productos.id=carrito.producto_id
+    JOIN precios ON precios.id=carrito.precio_id");
 
     require('vistas/carrito.php');
