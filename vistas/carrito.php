@@ -21,12 +21,12 @@
                     <h4 class="mt-3"> <?= count($productosCarrito); ?> articulos</h4>
                 </div>
                 <!-- fila cards articulos -->
-
-                <?php foreach($productosCarrito as $producto) :?>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card mt-4" style="width: 25rem;display:inline-block;">
-                                <img class="card-img-top" src="Imagenes/<?= $producto['imagen']?>" alt="Card image cap">
+                <div class="row">
+                    <div class="col">
+                        <?php foreach($productosCarrito as $producto) :?>
+                            
+                            <div class="card mt-4" style="width: 40%;display:inline-block;">
+                                <img class="card-img-top" height="300" src="Imagenes/<?= $producto['imagen']?>" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $producto['nombre_producto']?></h5>
                                     <!-- <p class="card-text text-secondary">Tamaño</p> -->
@@ -35,14 +35,15 @@
                                             <label class="input-group-text" for="inputGroupSelect01">Tamaño</label>
                                             <span class="form-control"><?= $producto['nombre_precio']?></span>
                                         </div>
-                                        
+
                                     </div>
                                     <p class="card-text text-secondary">Precio: $<?= number_format($producto['precio']) ?></p>
                                 </div>
                             </div>
-                        </div>
+                                
+                        <?php endforeach ?>
                     </div>
-                <?php endforeach ?>
+                </div>
                 <div class="row">
                     <div class="col">
                         <a href="#" class="btn btn-primary mt-4">Continuar</a>
