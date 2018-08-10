@@ -34,7 +34,7 @@
                 <?php foreach($productos as $producto) :?>
 
                   <div class="card mr-3 mt-3" style="width: 23%;display:inline-block;">
-                    <img class="card-img-top" src="Imagenes/<?= $producto['imagen'] ?>" alt="Card image cap">
+                    <img height="300" class="card-img-top" src="Imagenes/<?= $producto['imagen'] ?>" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title"><?= $producto['nombre'] ?></h5>
                       <a href="detalle.php?id=<?= $producto['id'] ?> " class="btn btn-primary">Seleccionar</a> <!-- data-toggle="modal" data-target="#modal<?= $producto['id'] ?>" -->

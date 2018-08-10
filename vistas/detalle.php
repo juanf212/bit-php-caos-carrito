@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="card mt-4">
-            <img src="Imagenes/<?= $producto['imagen'] ?>" class="rounded float-left" alt="Responsive image">
+            <img src="Imagenes/<?= $producto['imagen'] ?>" class="rounded float-left" alt="Responsive image" height="400" >
             </div>
         </div>
         <div class="col">
