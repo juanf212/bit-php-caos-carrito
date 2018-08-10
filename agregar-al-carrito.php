@@ -6,6 +6,6 @@
     $productoId = $_GET['producto'];
 
 
-    consulta("INSERT INTO carrito (producto_id, precio_id) VALUES ('$medidaId', '$productoId')");
+    consulta("INSERT INTO carrito (producto_id, precio_id) VALUES ('$productoId', '$medidaId')");
 
     redireccionar('carrito.php');
