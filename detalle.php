@@ -1,5 +1,9 @@
 <?php 
+    
     require('conexion.php');
+    require('sesion.php');
+
+
     $id = $_GET['id'];
     $producto = consulta(" SELECT * FROM productos WHERE id='$id' ");
     $producto = $producto[0];
