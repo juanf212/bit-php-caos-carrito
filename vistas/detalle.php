@@ -10,16 +10,7 @@
 <body>
 <?php require('navegacion.php');  ?>
 <div class="container">
-    <div class="row">
-            
-            <div class="col"><h5 class="mt-3">Bufandas</h5></div>
-            
-            <div class="col"><h5 class="mt-3">Turbantes</h5></div>
-            
-            <div class="col"><h5 class="mt-3">Accesorios</h5></div>
-            
-            <div class="col-md-auto"><h5 class="mt-3">Arte</h5></div>
-    </div>
+    <?php require('categorias.php'); ?>
 </div>
 <div class="container">
     <div class="row">

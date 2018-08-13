@@ -12,18 +12,11 @@
 </head>
 <body>
     <!-- 1. nav bar -->
-      <?php require('navegacion.php');?>
+    <?php require('navegacion.php');?>
     <!-- 2. categorias productos -->
     <div class="container">
     <div class="row">
-            <!-- 1.1. Columna boton Home -->
-            <div class="col"><h5 class="mt-3">Bufandas</h5></div>
-            <!-- 1.2. Columna boton Home -->
-            <div class="col"><h5 class="mt-3">Turbantes</h5></div>
-            <!-- 1.3. Columna boton Home -->
-            <div class="col"><h5 class="mt-3">Accesorios</h5></div>
-            <!-- 1.4. Columna boton Home -->
-            <div class="col-md-auto"><h5 class="mt-3">Arte</h5></div>
+      <?php require('categorias.php'); ?>
     </div>
     </div>
     <!-- 3. cards productos -->
